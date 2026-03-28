@@ -5,108 +5,144 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Balaji TK | CTO</title>
 
-  <!-- Tailwind CDN (lightweight) -->
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
     html { scroll-behavior: smooth; }
+
+    .glass {
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
-<body class="bg-gray-950 text-white font-sans">
+<body class="bg-black text-white font-sans">
+
+<!-- NAVBAR -->
+<header class="fixed w-full top-0 z-50 bg-black/60 backdrop-blur-lg border-b border-gray-800">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-4">
+    <h1 class="font-semibold">Balaji TK</h1>
+    <nav class="space-x-6 text-sm text-gray-400">
+      <a href="#about" class="hover:text-white">About</a>
+      <a href="#experience" class="hover:text-white">Experience</a>
+      <a href="#projects" class="hover:text-white">Projects</a>
+      <a href="#contact" class="hover:text-white">Contact</a>
+    </nav>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="h-screen flex flex-col justify-center items-center text-center px-6">
-  <h1 class="text-4xl md:text-6xl font-bold">Balaji TK</h1>
-  <p class="mt-4 text-xl text-gray-400">CTO | CIO | Digital Transformation Leader</p>
-  <p class="mt-6 max-w-2xl text-gray-500">
-    Helping organizations grow through Technology, AI, and Innovation.
+  <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+    Building the Future<br>
+    <span class="text-gray-500">Through Technology</span>
+  </h1>
+
+  <p class="mt-6 max-w-2xl text-gray-400 text-lg">
+    CTO | AI | Fintech | Digital Transformation Leader  
+    Driving scalable platforms, innovation, and business growth.
   </p>
 
   <div class="mt-8 flex gap-4">
-    <a href="#contact" class="bg-white text-black px-6 py-2 rounded-xl">Contact</a>
-    <a href="https://linkedin.com/in/balaji-tk" target="_blank" class="border px-6 py-2 rounded-xl">LinkedIn</a>
+    <a href="#contact" class="bg-white text-black px-6 py-3 rounded-xl font-medium">Connect</a>
+    <a href="https://linkedin.com/in/balaji-tk" target="_blank" class="border border-gray-700 px-6 py-3 rounded-xl">LinkedIn</a>
   </div>
 </section>
 
 <!-- ABOUT -->
-<section class="py-16 px-6 max-w-5xl mx-auto">
+<section id="about" class="py-24 px-6 max-w-5xl mx-auto fade-in">
   <h2 class="text-3xl font-semibold mb-6">About Me</h2>
-  <p class="text-gray-400 leading-relaxed">
-    Technology leader with 25+ years of experience driving fintech innovation, 
-    digital transformation, and scalable platform engineering. Currently leading 
-    engineering at FlexiLoans, building high-performance financial ecosystems.
+  <p class="text-gray-400 leading-relaxed text-lg">
+    Technology leader with 25+ years of experience in fintech, cloud, and AI. 
+    I specialize in building scalable digital platforms, leading high-performance teams, 
+    and driving enterprise transformation across organizations.
   </p>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="py-16 px-6 bg-gray-900">
+<section id="experience" class="py-24 px-6 bg-gray-950">
   <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-10">Experience</h2>
+    <h2 class="text-3xl font-semibold mb-12">Experience</h2>
 
     <div class="space-y-8">
-      <div>
+
+      <div class="glass p-6 rounded-2xl fade-in">
         <h3 class="text-xl font-bold">AVP Engineering – FlexiLoans</h3>
-        <p class="text-gray-400">2024 – Present</p>
-        <p class="text-gray-500 mt-2">
-          Leading architecture, AWS platform scaling, fintech integrations, and engineering teams.
+        <p class="text-gray-500">2024 – Present</p>
+        <p class="text-gray-400 mt-2">
+          Leading architecture, AWS scaling, fintech integrations, and engineering teams.
         </p>
       </div>
 
-      <div>
+      <div class="glass p-6 rounded-2xl fade-in">
         <h3 class="text-xl font-bold">CTO – Inditrade Scalerator</h3>
-        <p class="text-gray-400">2022 – 2024</p>
-        <p class="text-gray-500 mt-2">
-          Built fintech platforms onboarding 4000+ partners across India.
+        <p class="text-gray-500">2022 – 2024</p>
+        <p class="text-gray-400 mt-2">
+          Built fintech ecosystem onboarding 4000+ partners.
         </p>
       </div>
 
-      <div>
+      <div class="glass p-6 rounded-2xl fade-in">
         <h3 class="text-xl font-bold">CIO – Orange Retail Finance</h3>
-        <p class="text-gray-400">2018 – 2022</p>
-        <p class="text-gray-500 mt-2">
-          Built end-to-end loan systems scaling to 1.5L+ customers.
+        <p class="text-gray-500">2018 – 2022</p>
+        <p class="text-gray-400 mt-2">
+          Scaled platform to 1.5L+ customers with full digital transformation.
         </p>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section class="py-16 px-6 max-w-5xl mx-auto">
-  <h2 class="text-3xl font-semibold mb-6">Skills</h2>
-
-  <div class="flex flex-wrap gap-3">
-    <span class="bg-gray-800 px-4 py-2 rounded-lg">AI / ML</span>
-    <span class="bg-gray-800 px-4 py-2 rounded-lg">AWS / Cloud</span>
-    <span class="bg-gray-800 px-4 py-2 rounded-lg">Fintech</span>
-    <span class="bg-gray-800 px-4 py-2 rounded-lg">Digital Transformation</span>
-    <span class="bg-gray-800 px-4 py-2 rounded-lg">Architecture</span>
-    <span class="bg-gray-800 px-4 py-2 rounded-lg">Leadership</span>
-  </div>
-</section>
-
 <!-- PROJECTS -->
-<section class="py-16 px-6 bg-gray-900">
-  <div class="max-w-5xl mx-auto">
-    <h2 class="text-3xl font-semibold mb-6">Key Projects</h2>
+<section id="projects" class="py-24 px-6 max-w-5xl mx-auto">
+  <h2 class="text-3xl font-semibold mb-10">Key Projects</h2>
 
-    <ul class="space-y-4 text-gray-400">
-      <li>🚀 Digital Loan Platform (End-to-End)</li>
-      <li>🚀 Credit Engine & API Ecosystem</li>
-      <li>🚀 Partner Onboarding Platform (4000+ users)</li>
-      <li>🚀 Cloud-native Loan Management System</li>
-    </ul>
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div class="glass p-6 rounded-2xl fade-in">
+      <h3 class="font-semibold">Digital Loan Platform</h3>
+      <p class="text-gray-400 mt-2">End-to-end fintech lending system</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl fade-in">
+      <h3 class="font-semibold">Credit Engine</h3>
+      <p class="text-gray-400 mt-2">AI-driven lender recommendation system</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl fade-in">
+      <h3 class="font-semibold">Partner Platform</h3>
+      <p class="text-gray-400 mt-2">4000+ partner onboarding ecosystem</p>
+    </div>
+
+    <div class="glass p-6 rounded-2xl fade-in">
+      <h3 class="font-semibold">Cloud LMS</h3>
+      <p class="text-gray-400 mt-2">Scalable AWS-native loan system</p>
+    </div>
+
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="py-16 px-6 text-center">
-  <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+<section id="contact" class="py-24 px-6 text-center bg-gray-950">
+  <h2 class="text-3xl font-semibold mb-4">Let’s Connect</h2>
   <p class="text-gray-400">balaji_tk@yahoo.com</p>
-  <p class="text-gray-400 mt-2">Chennai, India</p>
 
-  <a href="mailto:balaji_tk@yahoo.com" class="inline-block mt-6 bg-white text-black px-6 py-2 rounded-xl">
+  <a href="mailto:balaji_tk@yahoo.com"
+     class="inline-block mt-6 bg-white text-black px-6 py-3 rounded-xl font-medium">
     Email Me
   </a>
 </section>
@@ -115,6 +151,21 @@
 <footer class="text-center py-6 text-gray-600 text-sm">
   © 2026 Balaji TK
 </footer>
+
+<!-- ANIMATION SCRIPT -->
+<script>
+  const elements = document.querySelectorAll('.fade-in');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
